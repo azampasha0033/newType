@@ -1,5 +1,6 @@
 import './App.css';
+import RouterComponent from './routes';
 
-const App = () => <div className="App">a</div>;
+const App = () => <RouterComponent />;
 
 export default App;
