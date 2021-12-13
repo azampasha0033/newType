@@ -1,9 +1,9 @@
 export type ILoginFormType = {
-  userName: string;
+  username: string;
   password: string;
 };
 
 export type ILoginFormErrors = {
-  userName: string;
+  username: string;
   password: string;
 };

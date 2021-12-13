@@ -2,29 +2,26 @@ import { ILoginFormType, ILoginFormErrors } from './types';
 import { isEmpty } from '../../../general/validations';
 
 export const ILoginFormInitialValue: ILoginFormType = {
-  userName: '',
+  username: '',
   password: ''
 };
 
 export const ILoginFormErrorsInitialValue: ILoginFormErrors = {
-  userName: '',
+  username: '',
   password: ''
 };
 
 export const validateInputForm = (inputData: ILoginFormType) => {
-  const errors: ILoginFormErrors = {
-    userName: '',
-    password: ''
-  };
-  const { userName, password } = inputData;
+  const errors: Partial<ILoginFormErrors> = {};
+  const { username, password } = inputData;
 
-  if (isEmpty(userName)) {
-    errors.userName = 'Please enter your username';
+  if (isEmpty(username)) {
+    errors.username = 'Please enter your username';
   }
 
   if (isEmpty(password)) {
     errors.password = 'Please enter your password';
   }
 
-  return errors;
+  return errors as ILoginFormErrors;
 };

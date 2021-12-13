@@ -7,18 +7,18 @@ import useFormLogin from './useFormLogin';
 const LoginView = memo(() => {
   const { handleChanged, userNameField, passwordField, handleSubmit, errors } =
     useFormLogin();
-  const { userName, password } = errors;
+  const { username, password } = errors;
   return (
     <div>
       <Input
         ref={userNameField}
         value={userNameField && userNameField.current?.value}
-        name="userName"
+        name="username"
         handleChange={handleChanged}
         placeholder="User Name"
         prefixed={<UserOutlined />}
       />
-      {userName && <small>{userName}</small>}
+      {username && <small>{username}</small>}
       <Input
         ref={passwordField}
         value={passwordField && passwordField.current?.value}
